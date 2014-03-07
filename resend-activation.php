@@ -137,6 +137,7 @@ else
 {
 	echo "
 		<form name='resendActivation' action='".$_SERVER['PHP_SELF']."' method='post' class='form-signin' role='form'>
+			<h2 class='form-signin-heading'>Resend Activation</h2>
 			<input type='text' class='form-control' placeholder='User Name' name='username'  required autofocus />
 			<input type='text' class='form-control' placeholder='email' name='email'  required/>
 			<button type='submit' class='btn btn-lg btn-primary btn-block'>Submit</button>

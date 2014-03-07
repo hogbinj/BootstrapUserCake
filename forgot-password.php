@@ -189,6 +189,7 @@ echo "
 <link href='css/signin.css' rel='stylesheet'>
 	<div class='container'>
 		<form name='newLostPass' action='".$_SERVER['PHP_SELF']."' method='post' class='form-signin' role='form'>
+			<h2 class='form-signin-heading'>Forgot Password</h2>
 			<input type='text' class='form-control' placeholder='User Name' name='username'  required autofocus />
 			<input type='text' class='form-control' placeholder='email' name='email'  required/>
 			<button type='submit' class='btn btn-lg btn-primary btn-block'>Submit</button>

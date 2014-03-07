@@ -96,6 +96,7 @@ echo resultBlock($errors,$successes);
 echo "
 	<div class='container'>
 		<form name='newUser' action='".$_SERVER['PHP_SELF']."' method='post' class='form-signin' role='form'>
+			<h2 class='form-signin-heading'>Register User</h2>
 			<input type='text' class='form-control' placeholder='User Name' name='username'  required autofocus />
 			<input type='text' class='form-control' placeholder='Display Name' name='displayname'  required />
 			<input type='password' class='form-control' placeholder='Password' name='password'  required />

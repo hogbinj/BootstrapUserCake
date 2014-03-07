@@ -97,6 +97,7 @@ echo "
 <link href='css/signin.css' rel='stylesheet'>
 	<div class='container'>
 		<form name='login' action='".$_SERVER['PHP_SELF']."' method='post' class='form-signin' role='form'>
+			<h2 class='form-signin-heading'>Login</h2>
 			<input type='text' class='form-control' placeholder='User Name' name='username'  required autofocus />
 			<input type='password' class='form-control' placeholder='Password' name='password'  required/>
 			<button type='submit' class='btn btn-lg btn-primary btn-block'>Sign in</button>
