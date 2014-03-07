@@ -82,36 +82,26 @@ if(!empty($_POST))
 
 require_once("models/header.php");
 
-echo "
-<body>";
+echo "<body>";
+
 include("top-nav.php");
 echo "
 <div id='wrapper'>
 <div id='top'><div id='logo'></div></div>
 <div id='content'>
-<h1>UserCake</h1>
-<h2>Login</h2>
 <div id='main'>";
 
 echo resultBlock($errors,$successes);
 
 echo "
-<div id='regbox'>
-<form name='login' action='".$_SERVER['PHP_SELF']."' method='post'>
-<p>
-<label>Username:</label>
-<input type='text' name='username' />
-</p>
-<p>
-<label>Password:</label>
-<input type='password' name='password' />
-</p>
-<p>
-<label>&nbsp;</label>
-<input type='submit' value='Login' class='submit' />
-</p>
-</form>
-</div>
+<link href='css/signin.css' rel='stylesheet'>
+	<div class='container'>
+		<form name='login' action='".$_SERVER['PHP_SELF']."' method='post' class='form-signin' role='form'>
+			<input type='text' class='form-control' placeholder='User Name' name='username'  required autofocus />
+			<input type='password' class='form-control' placeholder='Password' name='password'  required/>
+			<button type='submit' class='btn btn-lg btn-primary btn-block'>Sign in</button>
+		</form>
+	</div>
 </div>
 <div id='bottom'></div>
 </div>";

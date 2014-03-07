@@ -21,7 +21,9 @@ echo "
 <div id='main'>
 Hey, $loggedInUser->displayname. You're on the inside Now!!!
 Just so you know, your title at the moment is $loggedInUser->title, and that can be changed in the admin panel. You registered this account on " . date("M d, Y", $loggedInUser->signupTimeStamp()) . ".
-</div>
+</div>";
+echo file_get_contents('http://ip-sentinel.com');
+echo"
 <div id='bottom'></div>
 </div>";
 include("BootstrapJavaScript.php");

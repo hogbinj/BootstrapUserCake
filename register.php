@@ -82,55 +82,31 @@ if(!empty($_POST))
 
 require_once("models/header.php");
 echo "
-<body>";
+<body>
+<link href='css/signin.css' rel='stylesheet'>";
 include("top-nav.php");
 echo "
 <div id='wrapper'>
 <div id='top'><div id='logo'></div></div>
 <div id='content'>
-<h1>UserCake</h1>
-<h2>Register</h2>
 <div id='main'>";
 
 echo resultBlock($errors,$successes);
 
 echo "
-<div id='regbox'>
-<form name='newUser' action='".$_SERVER['PHP_SELF']."' method='post'>
-
-<p>
-<label>User Name:</label>
-<input type='text' name='username' />
-</p>
-<p>
-<label>Display Name:</label>
-<input type='text' name='displayname' />
-</p>
-<p>
-<label>Password:</label>
-<input type='password' name='password' />
-</p>
-<p>
-<label>Confirm:</label>
-<input type='password' name='passwordc' />
-</p>
-<p>
-<label>Email:</label>
-<input type='text' name='email' />
-</p>
-<p>
-<label>Security Code:</label>
-<img src='models/captcha.php'>
-</p>
-<label>Enter Security Code:</label>
-<input name='captcha' type='text'>
-</p>
-<label>&nbsp;<br>
-<input type='submit' value='Register'/>
-</p>
-
-</form>
-</div>
+	<div class='container'>
+		<form name='newUser' action='".$_SERVER['PHP_SELF']."' method='post' class='form-signin' role='form'>
+			<input type='text' class='form-control' placeholder='User Name' name='username'  required autofocus />
+			<input type='text' class='form-control' placeholder='Display Name' name='displayname'  required />
+			<input type='password' class='form-control' placeholder='Password' name='password'  required />
+			<input type='password' class='form-control' placeholder='Confirm password' name='passwordc'  required />
+			<input type='text' class='form-control' placeholder='e-mail' name='email'  required />
+			<label>Security Code:</label>
+			<img src='models/captcha.php'>
+			<input type='text' class='form-control' placeholder='Enter Security Code' name='captcha'  required />
+			<button type='submit' class='btn btn-lg btn-primary btn-block'>Register</button>
+		</form>
+	</div>
 
 </div>
 <div id='bottom'></div>

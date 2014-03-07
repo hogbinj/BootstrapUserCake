@@ -120,13 +120,13 @@ echo "
 <div id='wrapper'>
 <div id='top'><div id='logo'></div></div>
 <div id='content'>
-<h1>UserCake</h1>
-<h2>Resend Activation</h2>
 <div id='main'>";
 
 echo resultBlock($errors,$successes);
 
-echo "<div id='regbox'>";
+echo "
+<link href='css/signin.css' rel='stylesheet'>
+	<div class='container'>";
 
 //Show disabled if email activation not required
 if(!$emailActivation)
@@ -135,24 +135,16 @@ if(!$emailActivation)
 }
 else
 {
-	echo "<form name='resendActivation' action='".$_SERVER['PHP_SELF']."' method='post'>
-	<p>
-	<label>Username:</label>
-	<input type='text' name='username' />
-        </p>     
-        <p>
-        <label>Email:</label>
-        <input type='text' name='email' />
-        </p>    
-        <p>
-        <label>&nbsp;</label>
-        <input type='submit' value='Submit' class='submit' />
-        </p>
-        </form>";
+	echo "
+		<form name='resendActivation' action='".$_SERVER['PHP_SELF']."' method='post' class='form-signin' role='form'>
+			<input type='text' class='form-control' placeholder='User Name' name='username'  required autofocus />
+			<input type='text' class='form-control' placeholder='email' name='email'  required/>
+			<button type='submit' class='btn btn-lg btn-primary btn-block'>Submit</button>
+		</form>";
 }
 
 echo "
-</div>           
+	</div>           
 </div>
 <div id='bottom'></div>
 </div>";
